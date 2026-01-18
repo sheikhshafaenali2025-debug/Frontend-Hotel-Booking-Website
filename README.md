@@ -62,11 +62,6 @@ HotelBook/
 
 ---
 
-## ⚙️ Setup Instructions
-
-1. Clone or download this repository:
-   ```bash
-   git clone https://github.com/yourusername/hotelbook.git
 Future Enhancements
 
 ✅ Backend integration (Node.js / Firebase)
