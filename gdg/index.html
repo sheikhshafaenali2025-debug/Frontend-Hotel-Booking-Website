@@ -1,69 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hotel Booking | Portfolio Project</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Booking | Portfolio Project</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-
 <header>
-<h1>HotelBook</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#hotels">Hotels</a>
-<a href="#" id="openAuth">Login / Signup</a>
-</nav>
+  <h1>HotelBook</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#hotels">Hotels</a>
+    <a href="bookings.html">My Bookings</a>
+    <a href="#" id="openAuth">Login / Signup</a>
+    <a href="#" id="logoutBtn" style="display:none;">Logout</a>
+    <button id="themeToggle">🌙 Toggle Theme</button>
+  </nav>
 </header>
 
-
 <section class="hero">
-<h2>Book Hotels Easily & Securely</h2>
+  <h2>Book Hotels Easily & Securely</h2>
 </section>
-
 
 <section class="search-box">
-<input type="text" id="location" placeholder="Location" />
-<input type="number" id="maxPrice" placeholder="Max Price ($)" />
-<button id="searchBtn">Filter</button>
+  <input type="text" id="location" placeholder="Location" />
+  <input type="number" id="maxPrice" placeholder="Max Price ($)" />
+  <button id="searchBtn">Filter</button>
+  <button id="sortPriceBtn">Sort by Price</button>
 </section>
-
 
 <section class="hotels" id="hotelList"></section>
 
-
 <!-- Booking Modal -->
 <div class="modal" id="bookingModal">
-<div class="modal-content">
-<span class="close" onclick="closeBooking()">&times;</span>
-<h2 id="bookingHotel"></h2>
-<input type="date" id="checkin" />
-<input type="date" id="checkout" />
-<input type="number" id="guests" placeholder="Guests" />
-<button onclick="confirmBooking()">Confirm Booking</button>
+  <div class="modal-content">
+    <span class="close" onclick="closeBooking()">&times;</span>
+    <h2 id="bookingHotel"></h2>
+    <input type="date" id="checkin" />
+    <input type="date" id="checkout" />
+    <input type="number" id="guests" placeholder="Guests" />
+    <button onclick="confirmBooking()">Confirm Booking</button>
+  </div>
 </div>
-</div>
-
 
 <!-- Auth Modal -->
 <div class="modal" id="authModal">
-<div class="modal-content">
-<span class="close" onclick="closeAuth()">&times;</span>
-<h2>Login / Signup</h2>
-<input type="text" id="username" placeholder="Username" />
-<input type="password" id="password" placeholder="Password" />
-<button onclick="login()">Login</button>
+  <div class="modal-content">
+    <span class="close" onclick="closeAuth()">&times;</span>
+    <h2>Login / Signup</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <select id="role">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+    <button id="loginBtn">Login</button>
+  </div>
 </div>
-</div>
-
 
 <footer>
-<p>© 2026 HotelBook | Portfolio Project</p>
+  <p>© 2026 HotelBook | Portfolio Project</p>
 </footer>
 
-
+<script src="theme.js"></script>
 <script src="script.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
